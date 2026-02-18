@@ -2,23 +2,23 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Register from './Pages/Register';
+import Navbar from './components/Navebar';
+
 
 
 function App() {
   return (
     <BrowserRouter>
       {/* Navigation Links */}
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
-        <Link to="/contact">Contact</Link>
-      </nav>
+      <Navbar />
 
       {/* Route Definitions */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="/register" element={<Register />} />
      
     
       </Routes>
